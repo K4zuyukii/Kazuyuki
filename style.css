@@ -215,10 +215,13 @@ h2 {
 }
 
 .cert-thumbnail {
+  display: block;
   width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
-  border: 1px solid rgba(0,255,157,0.2);
+  border: 1px solid rgba(0, 255, 157, 0.2);
   cursor: pointer;
 }
 
@@ -232,6 +235,14 @@ h2 {
   color: #a8b2c1;
   font-size: 0.9em;
   margin-bottom: 15px;
+}
+
+.cert-desc {
+  color: #a8b2c1;
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin-top: 5px;
+  text-align: left;
 }
 
 .cert-status {
