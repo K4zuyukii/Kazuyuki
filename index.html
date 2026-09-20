@@ -2,81 +2,111 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kazuyuki Mera | IT Networking Portfolio</title>
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fira+Code&display=swap" rel="stylesheet">
 </head>
 <body>
 
+<!-- NAVIGATION -->
 <nav>
-  <h2>Kazuyuki Mera</h2>
+  <h2>Kazuyuki<span>.Mera</span></h2>
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
+<!-- HERO SECTION -->
 <header>
-  <h1>Hi, I'm [Your Name]</h1>
-  <p>IT Networking Student | CCNA in Progress</p>
+  <div class="header-content">
+    <p class="greeting">👋 Hello, I'm</p>
+    <h1>Kazuyuki Mera</h1>
+    <p class="subtitle">IT Networking Student | Future CCNA Certified</p>
+    <div class="header-buttons">
+      <a href="#projects" class="btn btn-primary">View My Work</a>
+      <a href="#contact" class="btn btn-outline">Get In Touch</a>
+    </div>
+  </div>
 </header>
 
+<!-- ABOUT SECTION -->
 <section id="about">
-  <h2>About Me</h2>
-  <p>I'm currently studying IT Networking, focused on routing, switching, 
-  and network security. I'm working toward my CCNA certification and enjoy 
-  building labs to practice real-world networking scenarios.</p>
-  
-  <h3>Skills</h3>
-  <ul>
-    <li>Cisco Router & Switch Configuration</li>
-    <li>VLANs & Trunking</li>
-    <li>OSPF / Routing Protocols</li>
-    <li>Subnetting & IP Addressing</li>
-    <li>Network Troubleshooting</li>
-  </ul>
+  <h2><span class="tag">01.</span> About Me</h2>
+  <div class="about-content">
+    <p>I'm currently studying IT Networking, with a strong focus on routing, 
+    switching, and network security. I'm working toward my <strong>CCNA certification</strong> 
+    and love building hands-on labs to practice real-world networking scenarios — 
+    from configuring VLANs to troubleshooting routing issues.</p>
+    <p>My goal is to become a skilled Network Engineer, and this portfolio documents 
+    my journey, labs, and growth in the field.</p>
+  </div>
 </section>
 
+<!-- SKILLS SECTION -->
+<section id="skills">
+  <h2><span class="tag">02.</span> Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">🔧 Cisco Router & Switch Configuration</div>
+    <div class="skill-card">🔀 VLANs & Trunking</div>
+    <div class="skill-card">🌐 OSPF / Routing Protocols</div>
+    <div class="skill-card">🔢 Subnetting & IP Addressing</div>
+    <div class="skill-card">🛠️ Network Troubleshooting</div>
+    <div class="skill-card">🔒 Basic Network Security</div>
+  </div>
+</section>
+
+<!-- PROJECTS SECTION -->
 <section id="projects">
-  <h2>Projects & Labs</h2>
+  <h2><span class="tag">03.</span> Projects & Labs</h2>
 
   <div class="project-card">
-    <h3>VLAN Configuration Lab</h3>
-    <p><strong>Objective:</strong> Segment a small office network into VLANs</p>
-    <img src="images/vlan-lab.png" alt="VLAN Topology" width="500">
-    <pre>
-Switch(config)# vlan 10
+    <div class="project-header">
+      <h3>VLAN Configuration Lab</h3>
+      <span class="badge">Packet Tracer</span>
+    </div>
+    <p><strong>Objective:</strong> Segment a small office network into VLANs to improve security and reduce broadcast traffic.</p>
+    <img src="images/vlan-lab.png" alt="VLAN Topology">
+    <pre><code>Switch(config)# vlan 10
 Switch(config-vlan)# name SALES
 Switch(config)# interface fa0/1
 Switch(config-if)# switchport mode access
-Switch(config-if)# switchport access vlan 10
-    </pre>
-    <p><strong>What I Learned:</strong> How VLANs isolate broadcast domains and improve network security.</p>
+Switch(config-if)# switchport access vlan 10</code></pre>
+    <p class="learned">💡 <strong>What I Learned:</strong> How VLANs isolate broadcast domains and improve network security.</p>
   </div>
 
   <div class="project-card">
-    <h3>Basic Router Configuration</h3>
-    <p><strong>Objective:</strong> Configure static routing between two networks</p>
-    <img src="images/router-lab.png" alt="Router Topology" width="500">
-    <pre>
-Router(config)# interface g0/0
+    <div class="project-header">
+      <h3>Basic Router Configuration</h3>
+      <span class="badge">Packet Tracer</span>
+    </div>
+    <p><strong>Objective:</strong> Configure static routing between two separate networks.</p>
+    <img src="images/router-lab.png" alt="Router Topology">
+    <pre><code>Router(config)# interface g0/0
 Router(config-if)# ip address 192.168.1.1 255.255.255.0
-Router(config-if)# no shutdown
-    </pre>
-    <p><strong>What I Learned:</strong> How routers forward packets between different networks.</p>
+Router(config-if)# no shutdown</code></pre>
+    <p class="learned">💡 <strong>What I Learned:</strong> How routers forward packets between different networks using interfaces and IP addressing.</p>
   </div>
 
 </section>
 
+<!-- CONTACT SECTION -->
 <section id="contact">
-  <h2>Contact Me</h2>
-  <p>Email: youremail@example.com</p>
-  <p>LinkedIn: <a href="#">linkedin.com/in/yourname</a></p>
-  <p>GitHub: <a href="#">github.com/yourusername</a></p>
+  <h2><span class="tag">04.</span> Contact Me</h2>
+  <p class="contact-intro">Interested in connecting or discussing networking? Reach out below!</p>
+  <div class="contact-links">
+    <a href="mailto:youremail@example.com" class="contact-item">📧 youremail@example.com</a>
+    <a href="https://linkedin.com/in/yourname" target="_blank" class="contact-item">💼 LinkedIn</a>
+    <a href="https://github.com/yourusername" target="_blank" class="contact-item">🐙 GitHub</a>
+  </div>
 </section>
 
 <footer>
-  <p>&copy; 2025 Your Name. Built with HTML/CSS on GitHub Pages.</p>
+  <p>&copy; 2025 Kazuyuki Mera. Built with HTML & CSS · Hosted on GitHub Pages</p>
 </footer>
 
 </body>
