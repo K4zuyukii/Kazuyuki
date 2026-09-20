@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Your Name | IT Networking Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <h2>YourName</h2>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>Hi, I'm [Your Name]</h1>
+  <p>IT Networking Student | CCNA in Progress</p>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I'm currently studying IT Networking, focused on routing, switching, 
+  and network security. I'm working toward my CCNA certification and enjoy 
+  building labs to practice real-world networking scenarios.</p>
+  
+  <h3>Skills</h3>
+  <ul>
+    <li>Cisco Router & Switch Configuration</li>
+    <li>VLANs & Trunking</li>
+    <li>OSPF / Routing Protocols</li>
+    <li>Subnetting & IP Addressing</li>
+    <li>Network Troubleshooting</li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>Projects & Labs</h2>
+
+  <div class="project-card">
+    <h3>VLAN Configuration Lab</h3>
+    <p><strong>Objective:</strong> Segment a small office network into VLANs</p>
+    <img src="images/vlan-lab.png" alt="VLAN Topology" width="500">
+    <pre>
+Switch(config)# vlan 10
+Switch(config-vlan)# name SALES
+Switch(config)# interface fa0/1
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 10
+    </pre>
+    <p><strong>What I Learned:</strong> How VLANs isolate broadcast domains and improve network security.</p>
+  </div>
+
+  <div class="project-card">
+    <h3>Basic Router Configuration</h3>
+    <p><strong>Objective:</strong> Configure static routing between two networks</p>
+    <img src="images/router-lab.png" alt="Router Topology" width="500">
+    <pre>
+Router(config)# interface g0/0
+Router(config-if)# ip address 192.168.1.1 255.255.255.0
+Router(config-if)# no shutdown
+    </pre>
+    <p><strong>What I Learned:</strong> How routers forward packets between different networks.</p>
+  </div>
+
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: youremail@example.com</p>
+  <p>LinkedIn: <a href="#">linkedin.com/in/yourname</a></p>
+  <p>GitHub: <a href="#">github.com/yourusername</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Your Name. Built with HTML/CSS on GitHub Pages.</p>
+</footer>
+
+</body>
+</html>
